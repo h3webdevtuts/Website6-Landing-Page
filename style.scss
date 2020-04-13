@@ -1,0 +1,295 @@
+$overlay: #212529;
+$blue: #007bff;
+$wt: #fff;
+$logo: rgba(0, 0, 0, 0.9);
+$grey: #6c757d;
+$text: #212529;
+$greybg: #f8f9fa;
+$boxshadow: 0 5px 5px 0 #adb5bd;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: $blue;
+  color: $wt;
+  padding: 9px 18px;
+  border-radius: 6px;
+  transition: background 500ms;
+  &:hover {
+    background: darken($color: $blue, $amount: 10%);
+  }
+}
+
+nav {
+  width: 100%;
+  padding: 14px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      cursor: pointer;
+      h2 {
+        color: $logo;
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  min-height: 70vh;
+  background: url("./img/bg-masthead.jpg") no-repeat center/cover;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $overlay;
+    opacity: 0.4;
+  }
+  .container {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    h1 {
+      color: $wt;
+      font-size: 45px;
+    }
+    .email {
+      padding: 50px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input {
+        padding: 15px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        width: 40%;
+        &::placeholder {
+          color: $grey;
+          font-weight: 400;
+        }
+      }
+      .btn {
+        padding: 13px 34px;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.products {
+  width: 100%;
+  padding: 100px 0;
+  background: $greybg;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .box {
+      width: 100%;
+      max-width: 30%;
+      text-align: center;
+      i {
+        color: $blue;
+      }
+      h3 {
+        color: $text;
+        font-size: 25px;
+        margin: 20px 0 10px 0;
+      }
+      p {
+        font-size: 17px;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.gallery {
+  width: 100%;
+  .container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      width: 100%;
+      max-width: 50%;
+      display: flex;
+      &.firstBg,
+      &.secondBg,
+      &.thirdBg {
+        height: 500px;
+      }
+      &.firstBg {
+        background: url("./img/bg-showcase-1.jpg") no-repeat center/cover;
+      }
+      &.secondBg {
+        background: url("./img/bg-showcase-2.jpg") no-repeat center/cover;
+      }
+      &.thirdBg {
+        background: url("./img/bg-showcase-3.jpg") no-repeat center/cover;
+      }
+      .info {
+        width: 100%;
+        max-width: 80%;
+        margin: auto;
+        h3 {
+          font-size: 32px;
+          font-weight: 500;
+          color: $text;
+          line-height: 1;
+        }
+        p {
+          margin: 15px 0 0 0;
+          font-size: 17px;
+          line-height: 1.5;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  width: 100%;
+  padding: 100px 0;
+  background: $greybg;
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+    color: $text;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 0 0;
+    .card {
+      width: 100%;
+      max-width: 30%;
+      text-align: center;
+      img {
+        width: 170px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: $boxshadow;
+      }
+      h3 {
+        margin: 8px 0;
+        color: $text;
+      }
+      p {
+        color: $grey;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.signup {
+  width: 100%;
+  padding: 120px 0;
+  background: url("./img/bg-masthead.jpg") no-repeat center/cover;
+  display: flex;
+  position: relative;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $overlay;
+    opacity: 0.6;
+  }
+  .container {
+    text-align: center;
+    margin: auto;
+    position: relative;
+    h2 {
+      color: $wt;
+      font-size: 30px;
+    }
+    .email {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      input {
+        padding: 15px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        width: 40%;
+        &::placeholder {
+          color: $grey;
+          font-weight: 400;
+        }
+      }
+      .btn {
+        padding: 13px 34px;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding: 100px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .links {
+      a {
+        text-decoration: none;
+        color: $blue;
+        margin-right: 16px;
+        transition: color 600ms, text-decoration 600ms;
+        &:hover {
+          color: darken($color: $blue, $amount: 20%);
+          text-decoration: underline;
+        }
+      }
+      .copyright {
+        padding: 8px 0 0 0;
+        p {
+          color: $grey;
+          font-size: 15px;
+        }
+      }
+    }
+    .icons {
+      i {
+        color: $blue;
+        cursor: pointer;
+        margin-left: 25px;
+        transition: color 500ms;
+        &:hover {
+          color: darken($color: $blue, $amount: 15%);
+        }
+      }
+    }
+  }
+}
